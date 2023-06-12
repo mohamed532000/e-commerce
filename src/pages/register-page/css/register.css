@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.register-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 0 100px 0;
+}
+.register-section > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.register-section > img.second-img {
+    display: none;
+}
+.register-section .container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+.register-section .container .register-form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.register-section .container .register-form .title-and-from {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+}
+.register-section .container .register-form .title-and-from {
+    width: auto;
+}
+.register-section .container .register-form .title-and-from .form-title {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.register-section .container .register-form .title-and-from .form-title > h2,
+.register-section .container .register-form .title-and-from .form-title > p {
+    text-align: center;
+    margin: 5px 0;
+    color: snow;
+}
+.register-section .container .register-form .title-and-from > a {
+    text-decoration: underline;
+    color: rgb(13, 154, 243);
+}
+.register-section .container .register-form .title-and-from form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;   
+}
+.register-section .container .register-form .title-and-from form .input-div {
+    position: relative;
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(220, 220, 220);
+    margin: 10px 0;
+}
+.register-section .container .register-form .title-and-from form .input-div > i {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 17px;
+    color: snow;
+}
+.register-section .container .register-form .title-and-from form .input-div > input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-indent: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    color: snow;
+}
+.register-section .container .register-form .title-and-from form .input-div > input::placeholder {
+    color: rgba(255, 250, 250, 0.575);
+}
+.register-section .container .register-form .title-and-from form > .checkbox-div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.register-section .container .register-form .title-and-from form > .checkbox-div > input {
+    transform: scale(1.1);
+    margin-right: 5px;
+}
+.register-section .container .register-form .title-and-from form > .checkbox-div > p {
+    font-size: 14px;
+}
+.register-section .container .register-form .title-and-from form > .checkbox-div > label {
+    color: snow;
+}
+.register-section .container .register-form .title-and-from form > .checkbox-div > label > a {
+    text-decoration: underline;
+    color: rgb(171, 171, 171);
+}
+.register-section .container .register-form .title-and-from form > .register-btn {
+    position: relative;
+    width: fit-content;
+    padding: 12px 30px;
+    color: snow;
+    margin: 10px 0;
+    outline: none;
+    border: none;
+    background-color: rgb(0, 110, 255);
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .5s;
+}
+.register-section .container .register-form .title-and-from form > .register-btn:hover {
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 470px) {
+    .register-section .container {
+        width: 100%;
+    }
+    .register-section .container .register-form .title-and-from {
+        margin-top: 30px;
+        width: 100%;
+    }
+    .register-section .container .register-form .title-and-from form {
+        width: 100%;
+    }
+    .register-section .container .register-form .register-img ,
+    .register-section .container .register-form .title-and-from form > .input-div,
+    .register-section .container .register-form .title-and-from form > .checkbox-div {
+        width: 90%;
+    }
+    .register-section .container .register-form .title-and-from form > .checkbox-div > label {
+        font-size: 12px;
+    }
+}
+@media (max-width: 600px) {
+    .register-section > img.first-img {
+        display: none;
+    }
+    .register-section > img.second-img {
+        display: block;
+    }
+    .register-section .container .register-form .title-and-from > a {
+        color: snow;
+    }
+}
+@media (max-width: 820px) {
+    .register-section .container .register-form {
+        flex-direction: column;
+    }
+}
+@media (max-width: 965px) {
+    .register-section {
+        padding: 200px 0 100px 0;
+    }
+}

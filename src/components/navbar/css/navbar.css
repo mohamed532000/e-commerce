@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.navbar {
+    background-color: #41403e;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99999999999999;
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    transition: .5s;
+}
+.navbar.on-scrolling {
+    background-color: #fafafa;
+    box-shadow: 1px 1px 10px 2px rgb(145, 145, 145);
+}
+.navbar.in-contact-page {
+    background-color: #41403e;;
+}
+.navbar .container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s;
+    padding: 12px 0;
+}
+.navbar .container .logo-and-dropping-list > h2.logo {
+    color: rgb(4, 206, 251);
+    margin-right: 10px;
+}
+.navbar .container .logo-and-dropping-list > i.dropping-list-btn {
+    font-size: 25px;
+    color: snow;
+    transition: .5s;
+    display: none;
+    cursor: pointer;
+}
+.navbar.on-scrolling .container {
+    padding: 15px 0 10px 0;
+}
+.navbar .container .search-div {
+    position: relative;
+    width: 300px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: #f3f3f3;
+}
+.navbar .container .search-div > input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    text-indent: 15px;
+    border-radius: inherit;
+    background-color: transparent;
+}
+.navbar .container .search-div > i {
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: inherit;
+}
+.navbar .container .routing-div {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+}
+.navbar .container .routing-div  ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+.navbar .container .routing-div  ul li a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: snow;
+    transition: .5s;
+}
+.navbar .container  .login-and-signup-div {
+    position: relative;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid snow;
+    padding-left: 10px;
+    transition: .5s;
+    margin-left: 20px;
+}
+.navbar .container  .login-and-signup-div  a {
+    font-size: 18px;
+    color: snow;
+    transition: .5s;
+}
+.navbar.on-scrolling .container .routing-div   ul li a ,
+.navbar.on-scrolling .container  .login-and-signup-div  a {
+    color: rgb(24, 24, 24);
+}
+.navbar.on-scrolling .login-and-signup-div  {
+    border-color: rgb(24, 24, 24);
+}
+
+@media  (max-width: 700px) {
+    .navbar .container {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .navbar .container .logo-and-dropping-list {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+    }
+    .navbar.navbar.on-scrolling .container .logo-and-dropping-list > i {
+        color: #41403e;
+    }
+    .navbar .container .logo-and-dropping-list > i.dropping-list-btn {
+        display: block;
+    }
+    .navbar .container .routing-div {
+        padding: 10px 0;
+        border-radius: 3px;
+        animation: returning-menu 1s ease-in-out 1 both;
+        background-color: #41403e;
+    }
+    .navbar.navbar.on-scrolling .container .routing-div {
+        background-color: transparent;
+    }
+    @keyframes returning-menu {
+        0% {
+            visibility: visible;
+            opacity: 1;
+            margin-top: 0;
+        }
+        25% {
+            visibility: visible;
+            opacity: 1;
+            margin-top: 3px;
+        }
+        50% {
+            visibility: visible;
+            opacity: 1;
+            margin-top: 0;
+        }
+        100% {
+            visibility: hidden;
+            opacity: 0;
+            margin-top: -230px;
+        }
+    }
+
+    .navbar .container .routing-div.dropped {
+        animation: drooping-menu 1s ease-in 1 both;
+    }
+    @keyframes drooping-menu {
+        0% {
+            visibility: hidden;
+            opacity: 0;
+            margin-top: -230px;
+        }
+        50% {
+            visibility: visible;
+            opacity: 1;
+            margin-top: 0;
+        }
+        75% {
+            visibility: visible;
+            opacity: 1;
+            margin-top: -3px;
+        }
+        100% {
+            visibility: visible;
+            opacity: 1;
+            margin-top: 0;
+        }
+    }
+    .navbar .container .routing-div,
+    .navbar .container .routing-div ,
+    .navbar .container .routing-div  ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar .container .routing-div  ul {
+        margin: 10px 0;
+    }
+    .navbar .container .search-div {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .navbar .container .login-and-signup-div {
+        width: 100%;
+        border-left: none;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+    }
+    .navbar .container .login-and-signup-div a {
+        padding: 3px 10px;
+    }
+    .navbar .container .login-and-signup-div a.register-btn {
+        border-right: 1px solid snow;
+    }
+}
+@media  (max-width: 965px) {
+    .navbar {
+        background-color: #41403e;
+    }
+    .navbar .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .navbar .container .login-and-signup-div {
+        margin-top: 7px;
+    }
+}

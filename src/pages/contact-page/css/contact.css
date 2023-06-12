@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.contact-section {
+    position: relative;
+    width: 100%;
+    padding-top: 100px;
+    background-color: #0f0f0f;
+    box-shadow: 1px 1px 1px 9px #0f0f0f;
+}
+.contact-section .container {
+    position: relative;
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-section .container .contact-texts {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.contact-section .container .contact-texts .contact-info,
+.contact-section .container .contact-texts .contact-form,
+.contact-section .container .contact-texts .contact-form form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.contact-section .container .contact-texts .contact-info .info-title {
+    margin-bottom: 10px;
+    color: snow;
+    font-weight: normal;
+}
+.contact-section .container .contact-texts .contact-info .info-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+.contact-section .container .contact-texts .contact-info .info-box .info-box-title {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.contact-section .container .contact-texts .contact-info .info-box .info-box-title > h3 {
+    color: rgb(220, 0, 0);
+    font-weight: normal;
+}
+.contact-section .container .contact-texts .contact-info .info-box .info-box-title > i {
+    margin-right: 5px;
+    color: rgb(220, 0, 0);
+}
+.contact-section .container .contact-texts .contact-info .info-box > p {
+    font-size: 15px;
+    color: rgb(243, 243, 243);
+}
+.contact-section .container .contact-texts .contact-form {
+    margin-top: 40px;
+}
+.contact-section .container .contact-texts .contact-form .form-title {
+    margin-bottom: 10px;
+    color: snow;
+    font-weight: normal;
+}
+.contact-section .container .contact-texts .contact-form form > input,
+.contact-section .container .contact-texts .contact-form form > textarea {
+    width: 450px;
+    height: 40px;
+    outline: none;
+    margin: 15px 0;
+    text-indent: 10px;
+    border: 1px solid rgb(71, 71, 71);
+    border-radius: 3px;
+}
+.contact-section .container .contact-texts .contact-form form > textarea {
+    padding: 10px;
+    height: 100px;
+}
+.contact-section .container .contact-texts .contact-form form > input.submit-btn {
+    width: fit-content;
+    padding: 5px 15px;
+    background-color: red;
+    color: snow;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+    border-radius: 0;
+}
+.contact-section .container .contact-map {
+    position: relative;
+    height: 600px;
+    width: 500px;
+}
+.contact-section .container .contact-map > iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+@media (min-width: 250px) and (max-width: 700px) {
+    .contact-section .container .contact-texts .contact-form form > input,
+    .contact-section .container .contact-texts .contact-form form > textarea {
+        width: 100%;
+    }
+    .contact-section .container .contact-texts .contact-form form > input.submit-btn {
+        margin: 5px 0;
+    }
+}
+@media (min-width: 250px) and (max-width: 815px) {
+    .contact-section .container .contact-texts {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 70px;
+    }
+}
+@media (max-width: 965px) {
+    .contact-section {
+        padding-top: 150px;
+    }
+}
+@media (min-width: 816px) and (max-width: 1029.33px) {
+    .contact-section .container .contact-texts {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media(max-width: 1029.33px) {
+    .contact-section .container .contact-map {
+        width: 100%;
+        height: 400px;
+    }
+}

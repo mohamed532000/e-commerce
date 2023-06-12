@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.about-section {
+    position: relative;
+    width: 100%;
+    padding: 100px  0 50px 0;
+    min-height: 100vh;
+}
+.about-section > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.about-section .container {
+    position: relative;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+.about-section .container .about-text {
+    position: relative;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-section .container .about-text h2 {
+    margin-bottom: 30px;
+    font-size: 45px;
+    color: rgb(235, 235, 235);
+    width: fit-content;
+    position: relative;
+    padding: 20px 0;
+}
+.about-section .container .about-text h2::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 6px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(235, 235, 235);
+}
+
+.about-section .container .about-text p {
+    color: snow;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+@media (max-width: 390px) {
+    .about-section .container .about-text h2,
+    .about-section .container .about-text p {
+        text-align: center;
+    }
+}
+@media (max-width: 965px) {
+    .about-section {
+        padding: 200px 0 100px 0;
+    }
+    .about-section .container .about-text p {
+        padding-bottom: 100px;
+        display: block;
+    }
+}
